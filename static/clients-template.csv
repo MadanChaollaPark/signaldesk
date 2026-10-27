@@ -1,0 +1,2 @@
+company,name,email,role,domain,relationship,context,allowed_claim,permission,verified,demo
+DEMO Example Studio,DEMO Alex,alex@example.com,Director,example.com,DEMO past client,DEMO only - replace with your actual verified relationship,DEMO only - an example of permitted wording,false,false,true

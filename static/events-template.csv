@@ -1,0 +1,3 @@
+event_id,title,date,organization,person,role,source_url,evidence_status
+DEMO-001,DEMO Example Forum,2026-01-01,DEMO Example Studio,DEMO Alex,speaker,https://example.com/demo,possible
+DEMO-001,DEMO Example Forum,2026-01-01,DEMO Example Target,DEMO Sam,attendee,https://example.com/demo,possible

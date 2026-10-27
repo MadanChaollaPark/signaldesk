@@ -1,0 +1,15 @@
+[Unit]
+Description=Read-only EUJobs refresh for SignalDesk
+[Service]
+Type=oneshot
+WorkingDirectory=/srv/data/signal-intro-20261027/app
+EnvironmentFile=-/srv/data/signal-intro-20261027/runtime/web.env
+ExecStart=/srv/data/signal-intro-20261027/runtime/venv/bin/python scripts/manage.py refresh
+StandardOutput=append:/srv/data/signal-intro-20261027/runtime/refresh.log
+StandardError=append:/srv/data/signal-intro-20261027/runtime/refresh.log
+UMask=0077
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/srv/data/signal-intro-20261027/data /srv/data/signal-intro-20261027/runtime
+MemoryMax=384M
+CPUQuota=50%

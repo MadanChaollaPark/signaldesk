@@ -1,0 +1,27 @@
+[Unit]
+Description=SignalDesk private outreach workspace
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/srv/data/signal-intro-20261027/app
+EnvironmentFile=-/srv/data/signal-intro-20261027/runtime/web.env
+Environment=PYTHONUNBUFFERED=1
+Environment=TMPDIR=/srv/data/signal-intro-20261027/runtime/tmp
+Environment=XDG_CACHE_HOME=/srv/data/signal-intro-20261027/runtime/cache
+Environment=PATH=/srv/data/signal-intro-20261027/runtime/venv/bin:/opt/node24/bin:/usr/bin:/bin
+ExecStartPre=/srv/data/signal-intro-20261027/runtime/venv/bin/python scripts/manage.py recover
+ExecStart=/srv/data/signal-intro-20261027/runtime/venv/bin/gunicorn --workers 1 --threads 6 --bind 127.0.0.1:3290 --timeout 120 --no-control-socket --max-requests 3000 --max-requests-jitter 200 --error-logfile /srv/data/signal-intro-20261027/runtime/web-error.log wsgi:app
+Restart=on-failure
+RestartSec=5
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ReadWritePaths=/srv/data/signal-intro-20261027/data /srv/data/signal-intro-20261027/runtime
+MemoryMax=512M
+CPUQuota=100%
+TasksMax=80
+
+[Install]
+WantedBy=default.target

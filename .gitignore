@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+.pytest_cache/
+*.pyc
+*.sqlite*
+node_modules/
+*.log
+runtime/
+data/
+outputs/
+coverage/
+.venv/
+.DS_Store
+*.pem
+*.key

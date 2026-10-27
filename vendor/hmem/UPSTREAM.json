@@ -1,0 +1,23 @@
+{
+  "commit": "1742dec56a66e58eef9dda2d2b865823758ca8cd",
+  "files": [
+    "engines/hmem/reference/README.md",
+    "engines/hmem/reference/package-lock.json",
+    "engines/hmem/reference/package.json",
+    "engines/hmem/reference/src/conflictDetection.ts",
+    "engines/hmem/reference/src/dreaming.ts",
+    "engines/hmem/reference/src/embeddings.ts",
+    "engines/hmem/reference/src/index.ts",
+    "engines/hmem/reference/src/memoryMining.ts",
+    "engines/hmem/reference/src/memoryRetrieval.ts",
+    "engines/hmem/reference/src/memoryStore.ts",
+    "engines/hmem/reference/src/sleepCycle.ts",
+    "engines/hmem/reference/src/trustLedger.ts",
+    "engines/hmem/reference/src/types.ts",
+    "engines/hmem/reference/test/smoke.test.ts",
+    "engines/hmem/reference/tsconfig.json",
+    "engines/hmem/LICENSE",
+    "engines/hmem/AGENTS.md",
+    "docs/products/nightshift/hotspot.md"
+  ]
+}
